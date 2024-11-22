@@ -164,6 +164,19 @@ const handleAddProducts = () => {
         })
       );
     };
+
+    
+    // Handle adding discount logic
+    const handleAddclose = (index) => {
+      setProducts((prev) =>
+        prev.map((p, idx) => {
+          if (idx === index) {
+            return { ...p, showDropdown: true };
+          }
+          return p;
+        })
+      );
+    };
      // State to track the visibility of product variants and the Add button
   const [visibleVariants, setVisibleVariants] = useState({});
 
